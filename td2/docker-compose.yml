@@ -1,8 +1,0 @@
-version: '3.9'
-services:
-  redis:
-    image: redis:7-alpine
-  node:
-    build: .
-    ports:
-      - "3000:3000"

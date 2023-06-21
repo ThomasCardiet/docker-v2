@@ -7,8 +7,8 @@ on:
 
 jobs:
   build:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -22,7 +22,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          file: ./td4/Dockerfile
+          file: ./Dockerfile
           context: .
           push: true
-          tags: ghcr.io/pgrimaud/td4-fpm:latest
+          tags: ghcr.io/thomascardiet/td4-fpm:latest
